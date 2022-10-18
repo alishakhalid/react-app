@@ -5,7 +5,7 @@ stages:
 
 test project:
   stage: test
-  image: node:16.13.0 # based on docker images, where everything is already installed such as node --> that's why we provide an image with node version
+  image: node:16.13.0 #based on docker images, where everything is already installed such as node --> that's why we provide an image with node version
   script:
     - yarn install
     - yarn test
@@ -14,5 +14,8 @@ build project:
   stage: build
   image: node:16.13.0
   script:
-    - yarn install # install dependencies
+    - yarn install # install all dependencies
     - yarn build
+
+netlify project:
+  stage: deploy
