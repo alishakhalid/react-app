@@ -16,6 +16,3 @@ build project:
   script:
     - yarn install # install all dependencies
     - yarn build
-
-netlify project:
-  stage: deploy
